@@ -31,6 +31,7 @@ pub fn build(b: *Build) void {
         .name = "generate",
         .root_source_file = .{ .path = "template/generate.zig" },
         .optimize = .ReleaseSafe,
+        .target = target,
     });
 
     const run_generate = b.addRunArtifact(build_generate);
